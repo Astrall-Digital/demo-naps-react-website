@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ command }) => ({
   plugins: [react()],
   // GitHub Pages serves from https://<user>.github.io/<repo>/
-  base: command === 'build' ? '/fake-naps-react-website/' : '/',
+  base: command === 'build' ? '/demo-naps-react-website/' : '/',
 }))
