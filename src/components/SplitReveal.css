@@ -10,13 +10,15 @@
   position: sticky;
   top: 0;
   height: 100vh;
+  height: 100dvh; /* Use dynamic viewport height if supported */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;
+  gap: 2rem;
   overflow: hidden;
   background: var(--black, #09090f);
+  padding: 60px 20px 20px; /* Space for site header if present */
 }
 
 /* ── Frame — both cards stack inside here ──────────────────────────────────── */
@@ -113,9 +115,23 @@
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .sr-stage {
-    gap: 1.5rem;
+    gap: 1rem;
+    padding-top: 80px; /* Offset for header */
+  }
+  .sr-frame {
+    width: 88vw;
+    height: 40vh; /* Reduced height on mobile */
   }
   .sr-tagline {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+  .sr-tagline::after {
+    margin-top: 1rem;
+  }
+  .sr-label {
+    bottom: 16px;
+    font-size: 0.7rem;
+    padding: 6px 16px;
   }
 }
